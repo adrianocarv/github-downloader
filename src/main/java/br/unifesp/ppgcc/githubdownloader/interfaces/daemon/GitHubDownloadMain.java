@@ -3,7 +3,7 @@ package br.unifesp.ppgcc.githubdownloader.interfaces.daemon;
 import br.unifesp.ppgcc.githubdownloader.application.GitHubDownloaderService;
 import br.unifesp.ppgcc.githubdownloader.infrastructure.util.LogUtils;
 
-public class SelectRandomProjectsMain {
+public class GitHubDownloadMain {
 
 	private static long startTime = -1;
 	
@@ -20,7 +20,7 @@ public class SelectRandomProjectsMain {
 			GitHubDownloaderService service = new GitHubDownloaderService();
 
 			//EXECUTE EXECUTE EXECUTE
-			service.selectRandomProjects(4);
+			service.execute();
 
 		} catch (Exception e) {
 			LogUtils.getLogger().error(e);
