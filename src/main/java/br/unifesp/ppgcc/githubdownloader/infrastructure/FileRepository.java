@@ -339,4 +339,9 @@ public class FileRepository {
 		Path targetContent = Paths.get(targetContentFolder.getPath());
 		Files.move(source, targetContent, StandardCopyOption.REPLACE_EXISTING);
 	}
+
+	public void saveRandomProjects(StringBuffer randomProjects) throws IOException {
+		Path path = Paths.get(this.outputPath + File.separator + "randomProjects.txt");
+        Files.write(path, String.valueOf(randomProjects).getBytes());
+	}
 }

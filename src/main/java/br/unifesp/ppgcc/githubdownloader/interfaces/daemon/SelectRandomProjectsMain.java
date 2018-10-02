@@ -20,7 +20,7 @@ public class SelectRandomProjectsMain {
 			GitHubDownloaderService service = new GitHubDownloaderService();
 
 			//EXECUTE EXECUTE EXECUTE
-			service.selectRandomProjects(4);
+			service.selectRandomProjects(10500);
 
 		} catch (Exception e) {
 			LogUtils.getLogger().error(e);

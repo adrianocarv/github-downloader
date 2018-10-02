@@ -96,11 +96,14 @@ public class GitHubDownloaderService {
 		
 	    Random random = new Random();
 	    
+		StringBuffer randomProjects = new StringBuffer();
 	    for (int i = 0; i < subsetSize; i++) {
 			int index = random.nextInt(total);
+			randomProjects.append(gitHubProjects.get(index).getRepository()+"\n");
 			System.out.println(gitHubProjects.get(index).getRepository());
 	    }
-
+		repository.saveRandomProjects(randomProjects);
+		
 	    //Print
 		this.printFinish();
 	}
